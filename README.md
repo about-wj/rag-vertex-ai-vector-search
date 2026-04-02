@@ -215,7 +215,7 @@ answer = llm.generate_content([user_part, doc_part, clean_prompt])
 > *System: Generates Text Embedding -> Retrieves Document Page -> Gemini reads the page and answers.*
 
 **Scenario 2: Image-to-Image RAG (实拍图查手册)**
-> `👉 请提问: 请根据知识库检索工具，识别 /home/bao_wenjun/broken_part.jpg 这张截图的产品，并告诉我如何维修？`
+> `👉 请提问: 请根据知识库检索工具，识别 /path/broken_part.jpg 这张截图的产品，并告诉我如何维修？`
 > *System: Extracts image path -> Generates Multimodal Embedding -> Retrieves manual explosion diagram -> Gemini compares the broken part with the manual and provides step-by-step repair guide.*
 
 ---
