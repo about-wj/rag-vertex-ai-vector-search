@@ -9,7 +9,6 @@ from vertexai.vision_models import MultiModalEmbeddingModel
 # ================= 配置区 =================
 PROJECT_ID = "your-gcp-project-id"  # 替换为你真实的 Project ID
 LOCATION = "us-central1"
-# 填入你新创建的 1408 维 Index 的完整路径，形如：projects/.../locations/.../indexes/...
 INDEX_NAME = "your-index-id" 
 PDF_PATH = "/path/xxxxxxxxxx.pdf" # 你本地的 PDF 文件路径
 # ==========================================
