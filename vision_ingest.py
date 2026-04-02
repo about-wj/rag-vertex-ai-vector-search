@@ -7,11 +7,11 @@ from vertexai.vision_models import Image as VisionImage
 from vertexai.vision_models import MultiModalEmbeddingModel
 
 # ================= 配置区 =================
-PROJECT_ID = "bd-host-2026-002"  # 替换为你真实的 Project ID
+PROJECT_ID = "your-gcp-project-id"  # 替换为你真实的 Project ID
 LOCATION = "us-central1"
 # 填入你新创建的 1408 维 Index 的完整路径，形如：projects/.../locations/.../indexes/...
-INDEX_NAME = "564315546863009792" 
-PDF_PATH = "/home/bao_wenjun/Full-catalog-4-1-duct-fan251010.pdf" # 你本地的 PDF 文件路径
+INDEX_NAME = "your-index-id" 
+PDF_PATH = "/path/xxxxxxxxxx.pdf" # 你本地的 PDF 文件路径
 # ==========================================
 
 print("正在初始化 GCP 环境...")
