@@ -1,45 +1,6 @@
-# Python
+.venv/
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
+*.pdf
+*.png
+*.jpg
 .env
-.venv
-venv/
-ENV/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Project specific
-*.log
-*_mapping.json
-chunk_mapping.json
-vector_search_mapping.json
-new_vector_search_mapping.json
-temp_query.json
-
-# Temporary files
-*.tmp
-.DS_Store

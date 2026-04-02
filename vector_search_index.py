@@ -13,12 +13,12 @@ import json
 # ---------------------------
 # CONFIG
 # ---------------------------
-PROJECT_ID = "your-project-id"  # Replace with your GCP project ID
+PROJECT_ID = "bd-host-2026-002"  # Replace with your GCP project ID
 LOCATION = "us-central1"     # Google Cloud region
 MODEL_NAME = "gemini-embedding-001"
-EMBED_DIM = 3072
-INDEX_DNAME = "gemini-vector-search-index"
-ENDPT_DNAME = "gemini-vector-search-endpoint"
+EMBED_DIM = 1408
+INDEX_DNAME = "gemini-vector-search-index-version"
+ENDPT_DNAME = "gemini-vector-search-endpoint-version"
 DEPLOYED_ID = "gemini_vector_search_deployed"
 
 # Route Google GenAI SDK to Vertex AI
@@ -53,8 +53,7 @@ def create_index_and_endpoint():
         display_name=INDEX_DNAME,
         dimensions=EMBED_DIM,                   # MUST match embeddings
         index_update_method="STREAM_UPDATE",    # enables upsert
-        distance_measure_type=aiplatform.matching_engine.matching_engine_index_config
-            .DistanceMeasureType.DOT_PRODUCT_DISTANCE,
+        distance_measure_type="DOT_PRODUCT_DISTANCE",
         description="Index for Mixture of Experts content",
         approximate_neighbors_count=150,        # Required for tree-AH algorithm
     )
@@ -140,7 +139,7 @@ def nearest_neighbors(endpoint_name: str, query: str, k: int = 5):
 # 5) Generate with Gemini (grounded)
 # ---------------------------
 def answer_with_gemini(context_snippets: List[str], question: str) -> str:
-    model = GenerativeModel("gemini-2.5-pro")  # or 2.5-flash for speed
+    model = GenerativeModel("gemini-2.5-flash")  # or 2.5-flash for speed
     context = "\n\n".join(context_snippets)
     prompt = f"""Use only the context to answer. Provide a detailed and comprehensive response with thorough explanations. Include all relevant information from the context. If the context doesn't contain relevant information, say "I don't have enough information to answer this question."
 
@@ -210,7 +209,7 @@ def chunk_text(text, chunk_size=1000, overlap=100):
 # ---------------------------
 if __name__ == "__main__":
     # Process PDF from GCS
-    PDF_URL = "gs://your-bucket-name/your-document.pdf"  # Replace with your GCS PDF path
+    PDF_URL = "gs://about_test/Full catalog 4-1 duct fan251010.pdf"  # Replace with your GCS PDF path
     pdf_path = download_from_gcs(PDF_URL)
     pdf_text = extract_text_from_pdf(pdf_path)
     chunks = chunk_text(pdf_text)
