@@ -13,7 +13,7 @@ import json
 # ---------------------------
 # CONFIG
 # ---------------------------
-PROJECT_ID = "bd-host-2026-002"  # Replace with your GCP project ID
+PROJECT_ID = "your-gcp-project-id"  # Replace with your GCP project ID
 LOCATION = "us-central1"     # Google Cloud region
 MODEL_NAME = "gemini-embedding-001"
 EMBED_DIM = 1408
@@ -209,7 +209,7 @@ def chunk_text(text, chunk_size=1000, overlap=100):
 # ---------------------------
 if __name__ == "__main__":
     # Process PDF from GCS
-    PDF_URL = "gs://about_test/Full catalog 4-1 duct fan251010.pdf"  # Replace with your GCS PDF path
+    PDF_URL = "gs://bucket_name/filename.pdf"  # Replace with your GCS PDF path
     pdf_path = download_from_gcs(PDF_URL)
     pdf_text = extract_text_from_pdf(pdf_path)
     chunks = chunk_text(pdf_text)
