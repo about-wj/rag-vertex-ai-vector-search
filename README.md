@@ -140,9 +140,9 @@ gcloud auth application-default login
 ```python
 PROJECT_ID = "your-project-id"
 LOCATION = "us-central1"
-INDEX_ID = "YOUR_NUMERIC_INDEX_ID"           # Pure numeric ID
-ENDPOINT_NAME = "YOUR_NUMERIC_ENDPOINT_ID"   # Pure numeric ID
-DEPLOYED_INDEX_ID = "your_deployed_index_id" # String ID used during deployment
+INDEX_ID = "YOUR_NUMERIC_INDEX_ID"           # 纯数字ID，索引ID
+ENDPOINT_NAME = "YOUR_NUMERIC_ENDPOINT_ID"   # 纯数字ID，在vector search服务index endpoint标签页的指定endpoint的ID列
+DEPLOYED_INDEX_ID = "your_deployed_index_id" # 字符串ID，在vector search服务index endpoint标签页，选中目标endpoint的详情页下方已部署的索引名
 ```
 
 ### Step 5: Create & deploy Vector Search index
