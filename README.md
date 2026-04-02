@@ -31,7 +31,7 @@
 
 传统文本 RAG 在处理包含复杂排版、图表、公式和产品渲染图的文档时，往往会丢失大量关键信息。Google Vertex AI 提供的 `multimodalembedding` 模型彻底改变了这一现状。它允许我们将文本和图像映射到同一个向量空间中。
 
-在本文中，我们将深入探讨多模态嵌入的原理，并展示如何结合 **Gemini 1.5 Pro** 和 **Vertex AI Vector Search** 构建一个高阶的 **Vision RAG (视觉检索增强生成)** 架构。该架构不仅支持传统的“以文搜图”，更支持“实物图搜文档”的跨模态高级推理。
+在本文中，我们将深入探讨多模态嵌入的原理，并展示如何结合 **Gemini 2.5 flash** 和 **Vertex AI Vector Search** 构建一个高阶的 **Vision RAG (视觉检索增强生成)** 架构。该架构不仅支持传统的“以文搜图”，更支持“实物图搜文档”的跨模态高级推理。
 
 ## What is Multimodal Embedding?
 
