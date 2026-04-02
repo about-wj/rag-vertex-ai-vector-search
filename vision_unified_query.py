@@ -9,7 +9,7 @@ from vertexai.generative_models import GenerativeModel, Part, Image as GenAIImag
 PROJECT_ID = "yout-project-id"
 LOCATION = "us-central1"
 ENDPOINT_NAME = "endpoint-id-number"
-DEPLOYED_INDEX_ID = "index-id"
+DEPLOYED_INDEX_ID = "your_deployed_index_id"  # 字符串ID，在vector search服务index endpoint标签页，选中目标endpoint的详情页下方已部署的索引名
 # ============================================
 
 print("正在初始化环境...")
