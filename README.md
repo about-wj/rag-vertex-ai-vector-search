@@ -1,6 +1,5 @@
 # Build a Multimodal Vision RAG Pipeline with Gemini Embeddings and Vector Search - A Deep Dive (Full Code)
 
-![Vision RAG Pipeline Architecture](https://cloud.google.com/images/architecture/multimodal-rag-architecture.png) *(可替换为你的实际架构图)*
 
 ## Table of Contents
 - [Introduction](#introduction)
