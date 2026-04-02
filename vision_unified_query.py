@@ -6,10 +6,10 @@ from vertexai.vision_models import MultiModalEmbeddingModel, Image as VisionImag
 from vertexai.generative_models import GenerativeModel, Part, Image as GenAIImage
 
 # ================= 1. 配置区 =================
-PROJECT_ID = "bd-host-2026-002"
+PROJECT_ID = "yout-project-id"
 LOCATION = "us-central1"
-ENDPOINT_NAME = "5517589041714823168"
-DEPLOYED_INDEX_ID = "gemini_vector_search_deployed"
+ENDPOINT_NAME = "endpoint-id-number"
+DEPLOYED_INDEX_ID = "index-id"
 # ============================================
 
 print("正在初始化环境...")
